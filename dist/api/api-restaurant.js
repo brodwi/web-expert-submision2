@@ -1,0 +1,1 @@
+import data from"./DATA.json";class ApiRestaurant{static async getAll(){return await data}}export default ApiRestaurant;
