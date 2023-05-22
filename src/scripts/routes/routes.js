@@ -3,7 +3,7 @@ import Detail from '../views/pages/detail';
  
 const routes = {
   '/': Menu, // default page
-  '/now-playing': Menu,
+  '/menu': Menu,
   '/detail/:id': Detail,
 };
  
