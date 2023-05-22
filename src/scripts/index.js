@@ -1,7 +1,23 @@
 import "regenerator-runtime";
-import "../styles/main.css";
+import '../styles/style.css';
+import '../styles/responsive.css';
 import "../scripts/components/nav-bar";
 import data from "../public/api/DATA.json";
+import App from './views/app';
+
+const app = new App({
+  button: document.querySelector('#menu'),
+  drawer: document.querySelector('#wrapper'),
+  content: document.querySelector('#main'),
+});
+ 
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+ 
+window.addEventListener('load', () => {
+  app.renderPage();
+});
 
 const renderRestaurants = (restaurants) => {
   let dataList = "";
